@@ -1,0 +1,7 @@
+.walkthrough, .product , .activation , .cost , .registration , .reporting , .privilege , .devsetting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 90vh;
+}

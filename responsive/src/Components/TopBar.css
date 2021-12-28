@@ -1,0 +1,131 @@
+.top{
+    width: 100%;
+    height: 80px;
+    background-color: silver;
+    position:sticky;
+    top: 100%; 
+    display: flex;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+}
+
+.topLeft{
+    flex:3;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.topCenter{
+    flex:6;
+
+}
+
+.topRight{
+    flex: 2;
+    
+}
+
+.topIcon{
+    font-size: 20px;
+    
+    color: #444;
+    cursor: pointer;
+}
+
+.topList{
+    display: flex;
+    justify-content:center;
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+
+}
+.topListItem:hover{
+    background-color:grey;
+    border-radius: 4px;
+    transition: all .2s ease-out;
+}
+
+@media only screen and (max-width:960px){
+    .top{
+        display:block;
+        position:relative;
+        top: 0%;
+        right: 0%;
+        
+        font-size: 1.8rem;
+        color: #fff;
+        transform: translate(0%,55%);
+        cursor:pointer;
+    }
+    .topListItem{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        position:absolute;
+        top: 10vh;
+        transition: all .4s ease;
+        overflow: auto;
+        opacity: 0;
+    }
+
+    .topList{
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        position:sticky;
+    }
+    .topSearchIcon{
+        font-size: 1rem;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        transform: translate(-100%,50%);
+    }
+}
+
+.topListItem{
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300 ;
+    cursor: pointer;
+    
+    
+}
+
+.topSearchIcon{
+    font-size: 10px;
+    color:black;
+    cursor: pointer;
+    margin-left: 15px;
+}
+@media only screen and (max-width: 300px){
+ .topListItem{
+     
+     font-size: 5rem;
+     transform: translate(-40%,60%);
+     flex-direction: column;
+     
+ }
+.topList{
+    font: size 1rem;
+    transform: translate(10%,55%);
+   
+}
+.topIcon{
+    font-size: 1rem;
+    transform: translate(0%,55%);
+    
+}
+.topSearchIcon{
+    font-size: 1rem;
+    transform: translate(1%,50%);
+}
+}
