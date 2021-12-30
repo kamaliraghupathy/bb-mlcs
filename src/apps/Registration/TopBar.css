@@ -7,8 +7,6 @@
     display: flex;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-    
 }
 
 .topLeft{
@@ -16,7 +14,6 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .topCenter{
@@ -31,7 +28,6 @@
 
 .topIcon{
     font-size: 20px;
-    
     color: #444;
     cursor: pointer;
 }
@@ -54,8 +50,8 @@
     .top{
         display:block;
         position:relative;
-        top: 0%;
-        right: 0%;
+        top: 0;
+        right: 0;
         
         font-size: 1.8rem;
         color: #fff;
@@ -96,8 +92,6 @@
     font-size: 18px;
     font-weight: 300 ;
     cursor: pointer;
-    
-    
 }
 
 .topSearchIcon{
@@ -108,17 +102,18 @@
 }
 @media only screen and (max-width: 300px){
  .topListItem{
-     
      font-size: 5rem;
      transform: translate(-40%,60%);
      flex-direction: column;
      
  }
+
 .topList{
-    font: size 1rem;
+    font-size: 1rem;
+    font-family: size;
     transform: translate(10%,55%);
-   
 }
+
 .topIcon{
     font-size: 1rem;
     transform: translate(0%,55%);
