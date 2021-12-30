@@ -1,4 +1,4 @@
-.walkthrough, .product , .activation , .cost , .registration , .reporting , .privilege , .devsetting {
+.walkthrough, .product, .activation, .cost, .registration, .reporting, .privilege, .devsetting {
   display: flex;
   justify-content: center;
   align-items: center;

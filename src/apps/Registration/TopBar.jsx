@@ -8,8 +8,7 @@ function TopBar() {
     
     return (
         <div className="top">
-          <div className="topLeft">
-               MLCS </div>
+          <div className="topLeft"> MLCS </div>
                
           <div className="topCenter">
               <ul className="topList">
