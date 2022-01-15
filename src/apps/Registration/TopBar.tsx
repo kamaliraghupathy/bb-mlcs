@@ -1,3 +1,4 @@
+import React from 'react';
 import './TopBar.css'
 import {  FaMinusCircle, FaPlusCircle,
       FaRegCheckSquare,
@@ -38,12 +39,6 @@ function TopBar() {
           <div className="topRight"> 
                <input type="text" placeholder="Search..."/>
                <button>Search</button>
-               
-          
-                  
-
-                
-             
             </div>
         </div>
     )
