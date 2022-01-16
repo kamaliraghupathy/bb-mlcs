@@ -1,44 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './TopBar.css'
-import {  FaMinusCircle, FaPlusCircle,
-      FaRegCheckSquare,
-      FaStar }
-     from 'react-icons/fa'
+import { FaMinusCircle, FaPlusCircle, FaRegCheckSquare, FaStar } from 'react-icons/fa'
 
-function TopBar() {
-    
+function TopBar(props) {
+    const {schoolSearchHandler} = props
+    const [schoolSearchKeyword, setSchoolSearchKeyword] = useState('');
+
     return (
         <div className="top">
-          <div className="topLeft"> MLCS </div>
-               
-          <div className="topCenter">
-              <ul className="topList">
-                <div>
-                  <li className="topListItem">Filters</li>
-                  </div>
-                  <FaPlusCircle />
-                
-                  <li className="topListItem">Expand All</li>
+            <div className="topLeft"> MLCS</div>
+            <div className="topCenter">
+                <ul className="topList">
+                    <div>
+                        <li className="topListItem">Filters</li>
+                    </div>
+                    <FaPlusCircle/>
 
-                  <FaMinusCircle />
+                    <li className="topListItem">Expand All</li>
 
-                  <li className="topListItem">Collapse All</li>
+                    <FaMinusCircle/>
 
-                  <FaStar />
+                    <li className="topListItem">Collapse All</li>
 
-                  <li className="topListItem">My Favorities</li>
+                    <FaStar/>
 
-                  <FaRegCheckSquare/>
+                    <li className="topListItem">My Favorities</li>
 
-                  <li className="topListItem">Send Notifictaion</li>
-                
-              </ul>
-              
-          </div>
-             
-          <div className="topRight"> 
-               <input type="text" placeholder="Search..."/>
-               <button>Search</button>
+                    <FaRegCheckSquare/>
+
+                    <li className="topListItem">Send Notifictaion</li>
+                </ul>
+            </div>
+            <div className="topRight">
+                <input
+                    type="text"
+                    placeholder={'search'}
+                    value={schoolSearchKeyword}
+                    onChange={e => setSchoolSearchKeyword(e.target.value)}
+                />
+                <button onClick={() => schoolSearchHandler(schoolSearchKeyword)}>Search</button>
             </div>
         </div>
     )
