@@ -1,29 +1,28 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import TopBar from "./TopBar";
 import Results from "./result/Results";
-import {requestSchoolMockData} from "../api/Mock/mock-api-request";
+import {requestSchoolMockDataWithQuery} from "../api/Mock/mock-api-request";
 
 /**
  * Functional Components for registration page
  */
 export const Registration = () => {
-    const [results, setResults] = useState([]);
+    const [searchResults, setSearchResults] = useState([]);
 
-    useEffect(() => {
-        // Instead of initialize should be handled by invoke functions
-        requestSchoolMockData().then(data => {
-            setResults(data)
+    const schoolSearchQuery = (q) => {
+        requestSchoolMockDataWithQuery(q).then(data => {
+            setSearchResults(data)
         })
-    }, []);
+    };
 
     return (
         <div>
             <div>
-                <TopBar/>
+                <TopBar schoolSearchHandler={schoolSearchQuery}/>
             </div>
-             <div>
-                <Results schools={results} expandAll='true' />
-             </div>
+            <div>
+                <Results schools={searchResults} expandAll='true'/>
+            </div>
         </div>
     )
 }
