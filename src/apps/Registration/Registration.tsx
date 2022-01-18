@@ -1,16 +1,17 @@
-import React, {useState} from 'react';
+import * as React from 'react';
 import TopBar from "./TopBar";
 import Results from "./result/Results";
 import {requestSchoolMockDataWithQuery} from "../api/Mock/mock-api-request";
+import {ISchoolResponseModel} from "./result/model/result-model";
 
 /**
  * Functional Components for registration page
  */
 export const Registration = () => {
-    const [searchResults, setSearchResults] = useState([]);
+    const [searchResults, setSearchResults] = React.useState<ISchoolResponseModel>([]);
 
-    const schoolSearchQuery = (q) => {
-        requestSchoolMockDataWithQuery(q).then(data => {
+    const schoolSearchQuery = (query: string) => {
+        requestSchoolMockDataWithQuery(query).then(data => {
             setSearchResults(data)
         })
     };
@@ -21,10 +22,10 @@ export const Registration = () => {
                 <TopBar schoolSearchHandler={schoolSearchQuery}/>
             </div>
             <div>
-                <Results schools={searchResults} expandAll='true'/>
+                <Results schools={searchResults} expandAll={true}/>
             </div>
         </div>
     )
-}
+};
 
 export default Registration

@@ -1,10 +1,15 @@
-import React, {useState} from 'react';
+import * as React from 'react';
 import './TopBar.css'
 import { FaMinusCircle, FaPlusCircle, FaRegCheckSquare, FaStar } from 'react-icons/fa'
 
-function TopBar(props) {
-    const {schoolSearchHandler} = props
-    const [schoolSearchKeyword, setSchoolSearchKeyword] = useState('');
+export interface IRegistrationOwnProps{
+    /* Callback executed when user entered the school name */
+    schoolSearchHandler: (data: string) => void;
+}
+
+export const TopBar = (props: IRegistrationOwnProps) => {
+    const {schoolSearchHandler} = props;
+    const [schoolSearchKeyword, setSchoolSearchKeyword] = React.useState<string>('');
 
     return (
         <div className="top">
@@ -42,6 +47,6 @@ function TopBar(props) {
             </div>
         </div>
     )
-}
+};
 
 export default TopBar;
