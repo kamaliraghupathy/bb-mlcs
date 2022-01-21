@@ -5,8 +5,9 @@ import { Security, SecureRoute, LoginCallback } from '@okta/okta-react';
 import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
 import Home from './Home';
 import SignIn from './Login';
-import Staff from './Staff'
 import SignInForm from './SignInForm';
+import Staff from './Staff';
+
 
 const AppWithRouterAccess = () => {
   const History = useHistory();
@@ -25,12 +26,10 @@ const AppWithRouterAccess = () => {
     History.replace(toRelativeUrl(originalUri,'https://localhost:3000'));
   };
 
+
   return (
     <Security oktaAuth={oktaAuth} restoreOriginalUri={restoreOriginalUri}>
-         {/* <Route path='/' exact={true} component={Home} />      */}
-        {/* remove above */}
-       <SecureRoute path='/' component={Staff}  />  
-       {/* remove staff */}
+        <SecureRoute path='/' component={Staff}  />  
       <Route path='/login' render={() => <SignIn />} />
       <Route path='/login/callback' component={LoginCallback} />
     </Security>
