@@ -9,9 +9,6 @@ import Cost from '../Pages/Cost'
 import Privilege from '../Pages/Privilege'
 import DevSetting from '../Pages/DevSetting'
 import Registration from "../apps/Registration/Registration";
-import AppWithRouterAccess from './AppWithRouterAccess'
-
-
 
 function Home(){
     return(
@@ -31,7 +28,6 @@ function Home(){
 </Router>   
     )
 }
-
 export default Home;
 
 

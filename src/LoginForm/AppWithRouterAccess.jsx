@@ -3,9 +3,7 @@ import { Route } from 'react-router-dom';
 import { useHistory} from 'react-router-dom';
 import { Security, SecureRoute, LoginCallback } from '@okta/okta-react';
 import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
-import Home from './Home';
 import SignIn from './Login';
-import SignInForm from './SignInForm';
 import Staff from './Staff';
 
 
